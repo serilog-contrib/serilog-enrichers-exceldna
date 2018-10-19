@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{FC355FE6-D157-4D77-985C-8F4F0078C607}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{032590B4-A924-488D-88D9-2636B0CDE75C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{1FB7904B-47AF-418B-8567-2CE55457A549}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CHANGES.md = CHANGES.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAddIn", "sample\SampleAddIn\SampleAddIn.csproj", "{CEC178AB-3A3A-49B4-8064-D8523E0D3735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.ExcelDna", "src\Serilog.Enrichers.ExcelDna\Serilog.Enrichers.ExcelDna.csproj", "{5F26EF43-543E-48F2-8B83-52EA92F8E73C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC178AB-3A3A-49B4-8064-D8523E0D3735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC178AB-3A3A-49B4-8064-D8523E0D3735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC178AB-3A3A-49B4-8064-D8523E0D3735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC178AB-3A3A-49B4-8064-D8523E0D3735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F26EF43-543E-48F2-8B83-52EA92F8E73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F26EF43-543E-48F2-8B83-52EA92F8E73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F26EF43-543E-48F2-8B83-52EA92F8E73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F26EF43-543E-48F2-8B83-52EA92F8E73C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEC178AB-3A3A-49B4-8064-D8523E0D3735} = {FC355FE6-D157-4D77-985C-8F4F0078C607}
+		{5F26EF43-543E-48F2-8B83-52EA92F8E73C} = {032590B4-A924-488D-88D9-2636B0CDE75C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC318D6F-08B7-4132-9850-468362A7B630}
+	EndGlobalSection
+EndGlobal

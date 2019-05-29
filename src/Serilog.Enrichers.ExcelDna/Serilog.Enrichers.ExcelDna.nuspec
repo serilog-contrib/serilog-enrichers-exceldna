@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata minClientVersion="3.3">
     <id>Serilog.Enrichers.ExcelDna</id>
     <version>0.0.1-local</version>
@@ -12,6 +12,7 @@
     <iconUrl>https://raw.githubusercontent.com/caioproiete/serilog-enrichers-exceldna/master/assets/serilog-enrichers-exceldna-nuget.png</iconUrl>
     <summary>A Serilog Enricher with properties from Excel-DNA</summary>
     <description>A Serilog Enricher with properties from Excel-DNA</description>
+    <language>en-US</language>
     <tags>serilog enricher exceldna excel-dna xll xllpath</tags>
     <copyright>Copyright (c) 2018 Caio Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</copyright>
     <dependencies>

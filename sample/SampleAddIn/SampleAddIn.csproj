@@ -59,6 +59,15 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="customUI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="customui14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExcelDna.DnaLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="SampleAddIn.dna" />
     <None Include="Properties\ExcelDna.Build.props" />

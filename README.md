@@ -50,4 +50,4 @@ In order for the Excel-DNA enricher to work from an add-in that was packaged usi
 
 ---
 
-_Copyright &copy; 2018 Caio Proiete & Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
+_Copyright &copy; 2018-2019 Caio Proiete & Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._

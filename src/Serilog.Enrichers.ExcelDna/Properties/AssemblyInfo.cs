@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("caioproiete.net")]
 [assembly: AssemblyProduct("Serilog.Enrichers.ExcelDna")]
-[assembly: AssemblyCopyright("Copyright © 2018 Caio Proiete & Contributors")]
+[assembly: AssemblyCopyright("Copyright © 2018-2019 Caio Proiete & Contributors")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -14,7 +14,7 @@
     <description>A Serilog Enricher with properties from Excel-DNA</description>
     <language>en-US</language>
     <tags>serilog enricher exceldna excel-dna xll xllpath</tags>
-    <copyright>Copyright (c) 2018 Caio Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</copyright>
+    <copyright>Copyright (c) 2018-2019 Caio Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</copyright>
     <dependencies>
       <group targetFramework=".NETFramework4.5">
         <dependency id="Serilog" version="2.5.0" exclude="Build,Analyzers" />

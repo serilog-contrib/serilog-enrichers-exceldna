@@ -13,9 +13,6 @@
 // limitations under the License.
 
 using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ExcelDna.Integration;
 using ExcelDna.Integration.Extensibility;
 using ExcelDna.Logging;
@@ -25,28 +22,22 @@ namespace SampleAddIn
 {
     public class AddIn : ExcelComAddIn, IExcelAddIn
     {
-        private static ILogger _log = Log.Logger;
-
         public void AutoOpen()
         {
-            try
-            {
-                Application.ThreadException += ApplicationThreadUnhandledException;
-                AppDomain.CurrentDomain.UnhandledException += AppDomainUnhandledException;
-                TaskScheduler.UnobservedTaskException += TaskSchedulerUnobservedTaskException;
-                ExcelIntegration.RegisterUnhandledExceptionHandler(ExcelUnhandledException);
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Verbose()
+                .Enrich.WithXllPath()
+                .Enrich.WithExcelVersion()
+                .Enrich.WithExcelVersionName()
+                .Enrich.WithExcelBitness()
+                .WriteTo.ExcelDnaLogDisplay(displayOrder: DisplayOrder.NewestFirst,
+                    outputTemplate: "{Properties:j}{NewLine}[{Level:u3}] {Message:lj}{NewLine}{Exception}")
+                .CreateLogger();
 
-                _log = Log.Logger = ConfigureLogging();
-                _log.Information("Starting sample Excel-DNA Add-In with Serilog Enricher ExcelDna");
+            Log.Information("Hello from {AddInName}! :)", DnaLibrary.CurrentLibrary.Name);
+            LogDisplay.Show();
 
-                LogDisplay.Show();
-
-                _log.Information("Sample Excel-DNA Add-In with Serilog Enricher ExcelDna started");
-            }
-            catch (Exception ex)
-            {
-                ProcessUnhandledException(ex);
-            }
+            ExcelComAddInHelper.LoadComAddIn(this);
         }
 
         public void AutoClose()
@@ -56,91 +47,10 @@ namespace SampleAddIn
 
         public override void OnDisconnection(ext_DisconnectMode disconnectMode, ref Array custom)
         {
-            try
-            {
-                base.OnDisconnection(disconnectMode, ref custom);
+            Log.Information("Goodbye from {AddInName}! :)", DnaLibrary.CurrentLibrary.Name);
+            Log.CloseAndFlush();
 
-                _log.Information("Stopping sample Excel-DNA Add-In with Serilog Sink LogDisplay");
-            }
-            catch (Exception ex)
-            {
-                ProcessUnhandledException(ex);
-            }
-            finally
-            {
-                _log.Information("Sample Excel-DNA Add-In with Serilog Sink LogDisplay stopped");
-
-                Log.CloseAndFlush();
-            }
-        }
-
-        public static void ProcessUnhandledException(Exception ex)
-        {
-            try
-            {
-                _log.Error(ex, null);
-            }
-            catch (Exception lex)
-            {
-                try
-                {
-                    Serilog.Debugging.SelfLog.WriteLine(lex.ToString());
-                }
-                catch
-                {
-                    // Do nothing...
-                }
-            }
-
-            if (ex.InnerException != null)
-            {
-                ProcessUnhandledException(ex.InnerException);
-                return;
-            }
-
-#if DEBUG
-            MessageBox.Show(ex.ToString(), "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-#else
-            const string errorMessage = "An unexpected error ocurred. Please try again in a few minutes, and if the error persists, contact support";
-            MessageBox.Show(errorMessage, "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-#endif
-        }
-
-        private static ILogger ConfigureLogging()
-        {
-            AppDomain.CurrentDomain.ProcessExit += (sender, args) => Log.CloseAndFlush();
-
-            return new LoggerConfiguration()
-                .MinimumLevel.Verbose()
-                .WriteTo.ExcelDnaLogDisplay(displayOrder: DisplayOrder.NewestFirst,
-                    outputTemplate: "{Properties:j}{NewLine}[{Level:u3}] {Message:lj}{NewLine}{Exception}")
-                .Enrich.WithXllPath()
-                .Enrich.WithExcelVersion()
-                .Enrich.WithExcelVersionName()
-                .Enrich.WithExcelBitness()
-                .CreateLogger();
-        }
-
-        private static void ApplicationThreadUnhandledException(object sender, ThreadExceptionEventArgs e)
-        {
-            ProcessUnhandledException(e.Exception);
-        }
-
-        private static void TaskSchedulerUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
-        {
-            ProcessUnhandledException(e.Exception);
-            e.SetObserved();
-        }
-
-        private static void AppDomainUnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            ProcessUnhandledException((Exception)e.ExceptionObject);
-        }
-
-        private static object ExcelUnhandledException(object ex)
-        {
-            ProcessUnhandledException((Exception)ex);
-            return ex;
+            base.OnDisconnection(disconnectMode, ref custom);
         }
     }
 }

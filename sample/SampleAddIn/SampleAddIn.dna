@@ -1,3 +1,7 @@
 <DnaLibrary Name="Excel-DNA Enrichers Sample Add-In" RuntimeVersion="v4.0" xmlns="http://schemas.excel-dna.net/addin/2018/05/dnalibrary">
-  <ExternalLibrary Path="SampleAddIn.dll" ExplicitExports="true" ExplicitRegistration="true" LoadFromBytes="false" Pack="false" />
+  <ExternalLibrary Path="SampleAddIn.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" IncludePdb="true" />
+
+  <Reference Path="Serilog.dll" Pack="true" IncludePdb="true" />
+  <Reference Path="Serilog.Enrichers.ExcelDna.dll" Pack="true" IncludePdb="true" />
+  <Reference Path="Serilog.Sinks.ExcelDnaLogDisplay.dll" Pack="true" IncludePdb="true" />
 </DnaLibrary>

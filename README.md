@@ -2,7 +2,11 @@
 
 Enriches [Serilog](https://serilog.net) events with information from your [Excel-DNA](https://excel-dna.net) Add-in.
 
-### Getting started
+## Give a Star! :star:
+
+If you like or are using this project please give it a star. Thanks!
+
+## Getting started
 
 Install the [Serilog.Enrichers.ExcelDna](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) package from NuGet:
 

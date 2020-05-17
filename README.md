@@ -1,4 +1,4 @@
-# Serilog.Enrichers.ExcelDna [![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![License](https://img.shields.io/github/license/caioproiete/serilog-enrichers-exceldna.svg)](LICENSE)
+# Serilog.Enrichers.ExcelDna [![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![License](https://img.shields.io/github/license/augustoproiete/serilog-enrichers-exceldna.svg)](LICENSE)
 
 Enriches [Serilog](https://serilog.net) events with information from your [Excel-DNA](https://excel-dna.net) Add-in.
 
@@ -52,6 +52,10 @@ In order for the Excel-DNA enricher to work from an add-in that was packaged usi
   <Reference Path="Serilog.Enrichers.ExcelDna.dll" Pack="true" />
 ```
 
+## Release History
+
+Click on the [Releases](https://github.com/augustoproiete/serilog-enrichers-exceldna/releases) tab on GitHub.
+
 ---
 
-_Copyright &copy; 2018-2020 Caio Proiete & Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
+_Copyright &copy; 2018-2020 C. Augusto Proiete & Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._

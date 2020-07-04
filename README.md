@@ -1,6 +1,13 @@
-# Serilog.Enrichers.ExcelDna [![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna)
+<h1 align="center">Serilog.Enrichers.ExcelDna</h1>
+<div align="center">
+
+[![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna)
 
 Enriches [Serilog](https://serilog.net) events with information from your [Excel-DNA](https://excel-dna.net) Add-in.
+
+![Seq showing properties from Serilog.Enrichers.ExcelDna](assets/serilog-enrichers-exceldna-nuget-seq.png)
+
+</div>
 
 ## Give a Star! :star:
 
@@ -37,8 +44,6 @@ The package includes:
 ### Example of an Excel-DNA add-in using Serilog with this sink
 
 In the [sample](sample/) folder, there's an example of an Excel-DNA add-in that uses Serilog for logging to the `LogDisplay` of Excel-DNA using this sink, and apply the enrichers described above.
-
-![Seq showing properties from Serilog.Enrichers.ExcelDna](assets/serilog-enrichers-exceldna-nuget-seq.png)
 
 ### Excel-DNA configuration for packing with `ExcelDnaPack`
 

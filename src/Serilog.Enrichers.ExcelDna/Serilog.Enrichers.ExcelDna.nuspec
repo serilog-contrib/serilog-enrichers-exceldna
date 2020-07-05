@@ -10,6 +10,7 @@
     <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</projectUrl>
     <repository type="git" url="https://github.com/augustoproiete/serilog-enrichers-exceldna" />
+    <icon>images\icon.png</icon>
     <iconUrl>https://raw.githubusercontent.com/augustoproiete/serilog-enrichers-exceldna/master/assets/serilog-enrichers-exceldna-nuget.png</iconUrl>
     <summary>A Serilog Enricher with properties from Excel-DNA</summary>
     <description>A Serilog Enricher with properties from Excel-DNA</description>
@@ -29,6 +30,7 @@
     </frameworkAssemblies>
   </metadata>
   <files>
+    <file src="..\..\assets\serilog-enrichers-exceldna-nuget.png" target="images\icon.png" />
     <file src="bin\$configuration$\Serilog.Enrichers.ExcelDna.dll" target="lib\net45\" />
     <file src="bin\$configuration$\Serilog.Enrichers.ExcelDna.pdb" target="lib\net45\" />
     <file src="bin\$configuration$\Serilog.Enrichers.ExcelDna.xml" target="lib\net45\" />

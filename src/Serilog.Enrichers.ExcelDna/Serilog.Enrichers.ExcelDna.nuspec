@@ -6,8 +6,8 @@
     <authors>C. Augusto Proiete</authors>
     <owners>augustoproiete</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
     <releaseNotes>https://github.com/augustoproiete/serilog-enrichers-exceldna/releases/tag/v$version$</releaseNotes>
-    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</projectUrl>
     <repository type="git" url="https://github.com/augustoproiete/serilog-enrichers-exceldna" />
     <icon>images\icon.png</icon>

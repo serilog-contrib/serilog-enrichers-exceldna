@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{1FB790
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAddIn", "sample\SampleAddIn\SampleAddIn.csproj", "{CEC178AB-3A3A-49B4-8064-D8523E0D3735}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.ExcelDna", "src\Serilog.Enrichers.ExcelDna\Serilog.Enrichers.ExcelDna.csproj", "{5F26EF43-543E-48F2-8B83-52EA92F8E73C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Enrichers.ExcelDna", "src\Serilog.Enrichers.ExcelDna\Serilog.Enrichers.ExcelDna.csproj", "{5F26EF43-543E-48F2-8B83-52EA92F8E73C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

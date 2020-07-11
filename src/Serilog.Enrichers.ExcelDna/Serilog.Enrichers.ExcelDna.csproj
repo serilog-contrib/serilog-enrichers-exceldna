@@ -1,65 +1,66 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F26EF43-543E-48F2-8B83-52EA92F8E73C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net45;net461;net472;net48</TargetFrameworks>
     <RootNamespace>Serilog</RootNamespace>
+
     <AssemblyName>Serilog.Enrichers.ExcelDna</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <GenerateAssemblyVersionAttribute>true</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>true</GenerateAssemblyFileVersionAttribute>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <DebugType>portable</DebugType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\assets\exceldna.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <AssemblyOriginatorKeyFile>../../assets/exceldna.snk</AssemblyOriginatorKeyFile>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+
+    <NoWarn>$(NoWarn);NU5048</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <DocumentationFile>bin\Release\Serilog.Enrichers.ExcelDna.xml</DocumentationFile>
+    <TreatSpecificWarningsAsErrors />
   </PropertyGroup>
+
+  <PropertyGroup>
+    <MinClientVersion>3.3</MinClientVersion>
+    <PackageId>Serilog.Enrichers.ExcelDna</PackageId>
+    <Version>0.0.1-local</Version>
+    <Authors>C. Augusto Proiete &amp; Contributors</Authors>
+    <Company>augustoproiete.net</Company>
+    <Description>A Serilog Enricher with properties from Excel-DNA</Description>
+    <Copyright>Copyright 2018-2020 C. Augusto Proiete &amp; Contributors - Provided under the Apache License, Version 2.0</Copyright>
+    <PackageTags>serilog;enricher;exceldna;excel-dna;xll;xllpath;excel</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIcon>images\icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/augustoproiete/serilog-enrichers-exceldna/master/assets/serilog-enrichers-exceldna-nuget.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/augustoproiete/serilog-enrichers-exceldna/releases</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="ExcelDna.Integration, Version=1.1.0.0, Culture=neutral, PublicKeyToken=f225e9659857edbe, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ExcelDna.Integration.1.1.0\lib\ExcelDna.Integration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.2.9.0\lib\net45\Serilog.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Enrichers\ExcelDna\ExcelBitnessEnricher.cs" />
-    <Compile Include="Enrichers\ExcelDna\ExcelVersionNameEnricher.cs" />
-    <Compile Include="Enrichers\ExcelDna\ExcelVersionEnricher.cs" />
-    <Compile Include="Enrichers\ExcelDna\XllPathEnricher.cs" />
-    <Compile Include="ExcelDnaLoggerConfigurationExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Serilog" Version="2.5.0" />
+    <PackageReference Include="ExcelDna.Integration" Version="1.1.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Serilog.Enrichers.ExcelDna.nuspec">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="..\..\assets\serilog-enrichers-exceldna-nuget.png" Pack="true" Visible="false" PackagePath="images\icon.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

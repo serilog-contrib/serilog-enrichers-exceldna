@@ -58,12 +58,8 @@ namespace Serilog.Enrichers.ExcelDna
 
             switch (versionNumber)
             {
-                case 17: // Office 2019 - 17.0
-                    versionName = "Excel 2019";
-                    break;
-
-                case 16: // Office 2016 - 16.0
-                    versionName = "Excel 2016";
+                case 16: // Office 2016 ^ 2019 ^ 365 - 16.0
+                    versionName = "Excel 2016 or 2019 or 365";
                     break;
 
                 case 15: // Office 2013 - 15.0

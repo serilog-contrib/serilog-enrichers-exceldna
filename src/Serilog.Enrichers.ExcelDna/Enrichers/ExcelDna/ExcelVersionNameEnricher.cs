@@ -46,8 +46,7 @@ namespace Serilog.Enrichers.ExcelDna
         public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
         {
             var cachedProperty =
-                _cachedProperty =
-                    _cachedProperty ?? propertyFactory.CreateProperty(ExcelVersionNamePropertyName, GetExcelVersionName(_includeExcelBitness));
+                _cachedProperty ??= propertyFactory.CreateProperty(ExcelVersionNamePropertyName, GetExcelVersionName(_includeExcelBitness));
 
             logEvent.AddPropertyIfAbsent(cachedProperty);
         }

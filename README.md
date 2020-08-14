@@ -1,11 +1,20 @@
+| README.md |
+|:---|
+
+<div align="center">
+
+<img src="assets/serilog-enrichers-exceldna-nuget.png" alt="Serilog.Enrichers.ExcelDna" width="100" />
+
+</div>
+
 <h1 align="center">Serilog.Enrichers.ExcelDna</h1>
 <div align="center">
 
-[![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna)
-
 Enriches [Serilog](https://serilog.net) events with information from your [Excel-DNA](https://excel-dna.net) Add-in.
 
-![Seq showing properties from Serilog.Enrichers.ExcelDna](assets/serilog-enrichers-exceldna-nuget-seq.png)
+[![NuGet Version](http://img.shields.io/nuget/v/Serilog.Enrichers.ExcelDna.svg?style=flat)](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-serilog-orange.svg)](http://stackoverflow.com/questions/tagged/serilog) [![Stack Overflow](https://img.shields.io/badge/stack%20overflow-excel--dna-orange.svg)](http://stackoverflow.com/questions/tagged/excel-dna)
+
+![Seq showing properties from Serilog.Enrichers.ExcelDna](assets/serilog-enrichers-exceldna-seq.png)
 
 </div>
 
@@ -13,7 +22,7 @@ Enriches [Serilog](https://serilog.net) events with information from your [Excel
 
 If you like or are using this project please give it a star. Thanks!
 
-## Getting started
+## Getting started :rocket:
 
 Install the [Serilog.Enrichers.ExcelDna](https://www.nuget.org/packages/Serilog.Enrichers.ExcelDna/) package from NuGet:
 

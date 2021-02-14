@@ -41,7 +41,7 @@
     <PackageProjectUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/augustoproiete/serilog-enrichers-exceldna/releases</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna</RepositoryUrl>
+    <RepositoryUrl>https://github.com/augustoproiete/serilog-enrichers-exceldna.git</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>

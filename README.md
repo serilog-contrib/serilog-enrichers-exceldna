@@ -68,7 +68,7 @@ In order for the Excel-DNA enricher to work from an add-in that was packaged usi
 
 ## Release History
 
-Click on the [Releases](https://github.com/augustoproiete/serilog-enrichers-exceldna/releases) tab on GitHub.
+Click on the [Releases](https://github.com/serilog-contrib/serilog-enrichers-exceldna/releases) tab on GitHub.
 
 ---
 

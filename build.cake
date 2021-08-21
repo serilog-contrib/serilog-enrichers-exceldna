@@ -60,7 +60,7 @@ Task("pack")
     .IsDependentOn("test")
     .Does(() =>
 {
-    var releaseNotes = $"https://github.com/augustoproiete/serilog-enrichers-exceldna/releases/tag/v{buildVersion.Version}";
+    var releaseNotes = $"https://github.com/serilog-contrib/serilog-enrichers-exceldna/releases/tag/v{buildVersion.Version}";
 
     DotNetCorePack("./src/Serilog.Enrichers.ExcelDna/Serilog.Enrichers.ExcelDna.csproj", new DotNetCorePackSettings
     {

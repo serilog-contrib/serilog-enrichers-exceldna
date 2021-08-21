@@ -1,1 +1,1 @@
-See: https://github.com/augustoproiete/serilog-enrichers-exceldna/releases
+See: https://github.com/serilog-contrib/serilog-enrichers-exceldna/releases
